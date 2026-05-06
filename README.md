@@ -141,7 +141,7 @@ OLLAMA_MODEL=llama3
 ```env
 LLM_PROVIDER=lmstudio
 LMSTUDIO_BASE_URL=http://localhost:1234
-LMSTUDIO_MODEL=qwen3.5-2b
+LMSTUDIO_MODEL=your-model-name
 ```
 
 Switch provider at runtime:
