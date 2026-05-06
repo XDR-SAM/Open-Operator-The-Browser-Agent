@@ -1,0 +1,43 @@
+# ============================================================
+# docker-compose.yml
+# Usage:
+#   docker compose up agent-cli    # CLI mode
+#   docker compose up agent-web    # Web UI mode at :3000
+# ============================================================
+
+version: "3.9"
+
+x-base: &base
+  build: .
+  env_file: .env
+  volumes:
+    - ./logs:/app/logs
+    - ./screenshots:/app/screenshots
+  restart: "no"
+
+services:
+
+  # ── CLI mode (interactive task input) ───────────────────
+  agent-cli:
+    <<: *base
+    stdin_open: true
+    tty: true
+    command: node src/index.js
+
+  # ── Web UI mode ──────────────────────────────────────────
+  agent-web:
+    <<: *base
+    command: node src/web-server.js
+    ports:
+      - "3000:3000"
+    environment:
+      - WEB_UI_PORT=3000
+
+  # ── Single task (pass TASK env var) ─────────────────────
+  agent-task:
+    <<: *base
+    command: >
+      node src/index.js
+      --task "${TASK:-Search Google for AI news and extract top 5 titles}"
+    profiles:
+      - task

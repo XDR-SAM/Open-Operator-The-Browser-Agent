@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Google Search Extract",
+    "description": "Search Google and extract top 5 result titles + URLs",
+    "task": "Go to https://www.google.com, search for 'latest AI research 2024', then extract the title and URL of the top 5 organic search results"
+  },
+  {
+    "name": "Scrape Book Store",
+    "description": "Extract all books with prices from toscrape.com",
+    "task": "Go to https://books.toscrape.com, extract all book titles and their prices from the first page, then report the 3 most expensive books"
+  },
+  {
+    "name": "Form Fill Demo",
+    "description": "Fill a demo contact form automatically",
+    "task": "Go to https://www.selenium.dev/selenium/web/web-form.html, fill in the text input with 'Hello World', select 'One' from the dropdown, check the checkbox, then take a screenshot"
+  },
+  {
+    "name": "Wikipedia Research",
+    "description": "Extract structured info from Wikipedia",
+    "task": "Go to https://en.wikipedia.org/wiki/Artificial_intelligence, extract the first 3 paragraphs of the article and the names of all sections in the table of contents"
+  },
+  {
+    "name": "Hacker News Top Stories",
+    "description": "Extract top stories from Hacker News",
+    "task": "Go to https://news.ycombinator.com, extract the top 10 story titles along with their point counts and comment counts"
+  },
+  {
+    "name": "GitHub Trending",
+    "description": "Get trending repositories from GitHub",
+    "task": "Navigate to https://github.com/trending, extract the names, descriptions, and star counts of the top 5 trending repositories today"
+  },
+  {
+    "name": "Screenshot & Describe",
+    "description": "Visit a page, screenshot it, and describe the layout",
+    "task": "Go to https://example.com, take a screenshot, and describe what you see on the page including any links and text content"
+  },
+  {
+    "name": "DuckDuckGo Search",
+    "description": "Search DuckDuckGo (no tracking) and extract results",
+    "task": "Go to https://duckduckgo.com, search for 'Node.js best practices 2024', and extract the titles and URLs of the first 5 results"
+  }
+]
